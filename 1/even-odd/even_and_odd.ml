@@ -16,4 +16,5 @@ let win (a: int) (b: int) : int =
   (*vince B se gioca un numero corretto e la somma dei due numeri è dispari*)
   | _ -> -1
 ;;
+
   

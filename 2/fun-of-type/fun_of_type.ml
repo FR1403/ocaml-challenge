@@ -20,14 +20,74 @@ let f4 (a, b: int * bool) : int =
   else 0
 ;;
 
-let f5 (a: int) (f: int -> int) =
-  
+let f5 (a: int) : int -> int = 
+  fun a -> a + 1
 ;;
 
-let f6 (a: int) (p: int -> bool) = 
+let f6 (a: int) : int -> bool = 
+  fun a -> if a>= 0 then true else false
 ;;
 
-let f7 (a: bool) (p: int -> bool) = 
+let f7 (a: bool) : int -> bool =
+  fun x -> a
+;;
+
+let f8 (b: bool) : bool -> int =
+  fun b -> if b then 1 else 0
+;;
+
+let f9 (b: bool) : int -> int =
+  fun x -> if b then 1 else 0
+;;
+
+(* let double (a: int) : int = 
+  a*2
+;; *)
+
+let f10 (f: int -> int) : int =
+  f 2
+;;
+
+let f11 (f: int -> bool) : int =
+  if(f 2) then 1 else 0
+;;
+
+let f12 (f: bool -> int) : int =
+  f true
+;;
+
+let f13 (f: int -> bool) : bool =
+  f 3
+;;
+
+let f14 (f: bool -> bool) : int =
+  if f false then 1 else 0
+;;
+
+let f15 (a: int)(b,c: int * int) : int =
+  match a with
+  | a when a >= 0 -> b 
+  | _ -> c
+;;
+
+let f16 (n: int) : int -> (int -> int) =
+  fun n -> fun x ->  n + 1
+;;
+
+let f17 (f: int -> int) : int -> int =
+  fun x -> f 3 
+;;
+
+let f18 (f: (int -> int) -> int ) : int = 
+  f (fun x -> 3)
+;;
+
+let f19 (f: int -> int) : bool -> bool =
+  if (f 0) = 0 then fun x -> x && true else fun y -> y && false
+;;
+
+let f20 (f: int -> bool) : bool -> int =
+  if f 3 then fun x -> 3 else fun y -> 4
 ;;
 
 
