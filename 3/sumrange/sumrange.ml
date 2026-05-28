@@ -1,8 +1,8 @@
 let sumrange (a: int) (b: int) : int =
-  let rec sum (x: int) (y: int) : int =
+  let rec sum (x: int) (y: int) : int = 
     if x <= y then x + sum (x+1) y
     else 0
-  in
+  in 
   sum a b
 ;;
 
